@@ -92,29 +92,6 @@ The layer outputs one vector (3 values)
 for each input sample.
 '''
 
-
-# ----------------------------------- --- #
-# VISUAL BREAKDOWN (CONCEPTUAL IMAGES)
-# ---------------------------------------#
-
-'''
-### 1. INPUTS AND DETAILS
-[image-3.png]
-
-### 2. UNDERSTANDING SHAPES
-[image.png]
-
-### 3. EACH STEP CONCEPTUALLY
-[image.png]
-
-### 4. HOW ONE ROW IS COMPUTED
-[image-2.png]
-
-### 5. FINAL OUTPUT
-[image.png]
-'''
-
-
 # ----------------------------------- --- #
 # FINAL CODE (POLISHED VERSION)
 # ---------------------------------------#
