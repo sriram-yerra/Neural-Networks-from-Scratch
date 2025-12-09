@@ -1,6 +1,10 @@
 import sys
 print(sys.executable)
 
+# ----------------------------------- --- #
+# SIMPLE NEURON (3 inputs)
+# ---------------------------------------#
+
 ### SIMPLE NEURON:
 inputs = [1.0, 2.0, 3.0]
 weights = [0.2, 0.8, -0.5]
@@ -13,6 +17,10 @@ for i in range(len(inputs)):
 print(output)
 
 
+# ----------------------------------- --- #
+# SIMPLE NEURON (5 inputs)
+# ---------------------------------------#
+
 inputs = [1.0, 2.0, 3.0, 4.0, 2.5]
 weights = [0.2, 0.8, -0.5, 1.0, 1.0]
 bias = 2.0
@@ -23,6 +31,10 @@ for i in range(len(inputs)):
 
 print(output)
 
+
+# ----------------------------------- --- #
+# LAYER OF NEURONS (manual computation)
+# ---------------------------------------#
 
 ### LAYER OF NEURONS:
 
@@ -64,6 +76,10 @@ outputs = [
 
 print(outputs)
 
+
+# ----------------------------------- --- #
+# LAYER OF NEURONS (generic loop-based)
+# ---------------------------------------#
 
 # Neural networks typically have **layers** that consist of more than one neuron.
 # Layers are nothing more than groups of neurons.
