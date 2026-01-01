@@ -89,3 +89,28 @@ class Layer:
         if self.b_l2 > 0:
             d_b_l2 = 2 * self.b_l2 * self.biases
             self.db += d_b_l2
+
+class Dropout:
+
+    def __init__(self, drop_rate: float) -> None:
+        self.rate = 1 - drop_rate
+
+        self.output = None
+        self.derivatives = None
+        self.mask = None
+
+    def forward(self, inputs: np.ndarray) -> None:
+        """
+        Forward pass of the layer.
+        Change the values of the inputs to 0 with a probability of `self.rate`.
+        """
+        # Normalizing the mask to keep the same scale with the inputs.
+        self.mask = np.random.binomial(1, self.rate, size=inputs.shape) / self.rate
+        # Element-wise multiplication of the inputs and the mask.
+        self.output = inputs * self.mask
+
+    def backward(self, derivatives):
+        """
+        Backward pass of the layer.
+        """
+        self.derivatives = derivatives * self.mask
